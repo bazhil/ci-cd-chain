@@ -7,6 +7,9 @@ generator = None
 try:
     from buzz import generator
 except:
+    # при старте проекта в докере падает непонятная ошибка импорта, чтобы не морочиться скопировал сюда код
+    # беспонтовый костыль, но для обучения развертываюнию проекта в докере не критично
+
     import random
 
     buzz = ('continuous testing', 'continuous integration', 'continuous deployment', 'continuous improvement', 'devops')
